@@ -3,9 +3,6 @@ aggregate: # define our output columns
     count product_name as purchased
     sum product_price as total_revenue with product_name
 
-sort:
-    person # sort using person aggregate
-
 # search for a purchase event
 match where action is 'purchase': # match one
     # store the name of the product matched
