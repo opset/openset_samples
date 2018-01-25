@@ -24,7 +24,7 @@ debug = args.debug ? "?debug=true" : "";
 
 request.post(
     {
-        url: "http://" + args.host + ":" + args.port + "/v1/query/highstreet/events" + debug,
+        url: "http://" + args.host + ":" + args.port + "/v1/query/highstreet/event" + debug,
         body: pyql // raw text
     },
     (err, response, data) => {

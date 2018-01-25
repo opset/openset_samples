@@ -1,7 +1,8 @@
 aggregate:
     count person
     count product_name as purchased
-    sum product_price as total_spent with product_name
+    sum product_price as total_spent
 
-match where product_group is 'outdoor':
-    tally(product_tags, product_name)
+match where 'retro' in product_tags:
+    for tag in product_tags:
+        tally(product_name, tag)

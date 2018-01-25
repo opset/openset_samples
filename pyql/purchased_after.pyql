@@ -1,21 +1,48 @@
 aggregate: # define our output columns
     count person
     count product_name as purchased
-    sum product_price as total_revenue with product_name
+    sum product_price as total_revenue
 
-# search for a purchase event
-match where action is 'purchase': # match one
-    # store the name of the product matched
-    first_matching_product = product_name
+# STEP 1
+# search for a purchase events
+match where action == 'purchase':
+    # store the order_id
+    first_order_id = order_id
 
-    # move to next row in user record. We don't want
-    # match products in the intial match
-    iter_next()
+    # products will hold the product names that
+    # were purchased in STEP 1
+    products = set()
 
-    # match 1 row, or only the products in the purchase event
-    # immediately following the product match above
-    match 1 where action is 'purchase' and
-            product_name is not first_matching_product:
-        tally(first_matching_product, product_name)
+    # STEP 2
+    # gather the product names in the subsequent
+    # 'cart_item' rows that have the same order_id
+    # as the above match
+    match where action == 'cart_item' and
+            order_id == first_order_id:
+        products.add(product_name)
 
-    # loop back to top
+    # STEP 3
+    # find the NEXT purchase
+    match 1 where action == 'purchase' and
+        order_id != first_order_id: # match one
+
+        # store this subsequent
+        subsequent_order_id = order_id
+
+        # STEP 4
+        # for each 'cart_item' row
+        # iterate the products capture in
+        # Step 2 with the product_name in the row
+        match where action == 'cart_item' and
+                order_id == subsequent_order_id:
+
+            for product in products:
+                # Tally counts for
+                # sub-sequent product name under name
+                # under product_name in this row
+                if product == product_name:
+                    continue
+
+                tally(product, product_name)
+
+    # loop to top

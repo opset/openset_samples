@@ -58,34 +58,43 @@ async.series([
     },
     function create_table(next_step_cb) {
         command = {
-            columns: [{
-                name: "product_name",
-                type: "text"
+            "columns": [{
+                "name": "order_id",
+                "type": "int"
             }, {
-                name: "product_price",
-                type: "double"
+                "name": "product_name",
+                "type": "text"
             }, {
-                name: "product_shipping",
-                type: "double"
+                "name": "product_price",
+                "type": "double"
             }, {
-                name: "shipper",
-                type: "text"
+                "name": "product_shipping",
+                "type": "double"
             }, {
-                name: "total",
-                type: "double"
+                "name": "shipper",
+                "type": "text"
             }, {
-                name: "shipping",
-                type: "double"
+                "name": "total",
+                "type": "double"
             }, {
-                name: "product_tags",
-                type: "text"
+                "name": "shipping",
+                "type": "double"
             }, {
-                name: "product_group",
-                type: "text"
+                "name": "product_tags",
+                "type": "text",
+                "is_set": true
             }, {
-                name: "cart_size",
-                type: "int"
-            }]
+                "name": "product_group",
+                "type": "text",
+                "is_set": true
+            }, {
+                "name": "cart_size",
+                "type": "int"
+            }],
+            "z_order": [
+                "purchase",
+                "cart_item"
+            ]
         };
 
         request.post(

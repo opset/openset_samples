@@ -3,8 +3,8 @@ aggregate: # define our output columns
     count product_name as purchased
     sum product_price as total_spent with product_name
 
-# iterate events where product_group is 'outdoor'
-match where product_group is 'outdoor':
-    # make a branch /day_of_week/product_name and
-    # aggregate it's levels
+# iterate events where the product_group set contains 'outdoor'
+match where 'outdoor' in product_group:
+    # make a branch: /day_of_week/product_name
+    # and aggregate person, product purchase, and total
     tally(get_day_of_week(event_time()), product_name)
