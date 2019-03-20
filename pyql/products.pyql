@@ -1,7 +1,7 @@
 aggregate:
-    count person
+    count id
     count product_name as purchased
     sum product_price as total_spent with product_name
 
-match:
-    tally(product_name)
+for row in rows:
+    tally(row['product_name'])

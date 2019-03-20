@@ -1,8 +1,8 @@
 aggregate:
-    count person
+    count id
     count shipper
     sum shipping
     sum total
 
-match:
-    tally('all', shipper)
+for row in rows:
+    tally('all', row['shipper'])

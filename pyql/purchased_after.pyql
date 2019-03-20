@@ -1,48 +1,48 @@
 aggregate: # define our output columns
-    count person
+    count id
     count product_name as purchased
     sum product_price as total_revenue
 
 # STEP 1
 # search for a purchase events
-match where action == 'purchase':
-    # store the order_id
-    first_order_id = order_id
+for purchase_row in rows
+    if event == 'purchase':
 
-    # products will hold the product names that
-    # were purchased in STEP 1
+    # products will hold the `product_name`s that
+    # are found in the `cart_item`s associated with
+    # the above purchase
     products = set()
 
     # STEP 2
-    # gather the product names in the subsequent
-    # 'cart_item' rows that have the same order_id
-    # as the above match
-    match where action == 'cart_item' and
-            order_id == first_order_id:
-        products.add(product_name)
+    # gather the product names for the above purchase
+    continue for item_row in rows if
+            event == 'cart_item' and
+            order_id == purchase_row['order_id']:
+
+        products.add(item_row['product_name'])
 
     # STEP 3
-    # find the NEXT purchase
-    match 1 where action == 'purchase' and
-        order_id != first_order_id: # match one
-
-        # store this subsequent
-        subsequent_order_id = order_id
+    # find the just the NEXT purchase (continue for 1)
+    continue for 1 sub_purchase_row in rows if
+            event == 'purchase' and
+            order_id != purchase_row['order_id']: # match one
 
         # STEP 4
         # for each 'cart_item' row
         # iterate the products capture in
         # Step 2 with the product_name in the row
-        match where action == 'cart_item' and
-                order_id == subsequent_order_id:
+        continue for sub_item_row in rows if
+                event == 'cart_item' and
+                order_id == sub_purchase_row['order_id']:
 
             for product in products:
-                # Tally counts for
-                # sub-sequent product name under name
-                # under product_name in this row
-                if product == product_name:
+                # Tally counts for each product in the
+                # subusequent purchase for each product in
+                # the first match
+
+                if product == sub_item_row['product_name']:
                     continue
 
-                tally(product, product_name)
+                tally(product, sub_item_row['product_name'])
 
-    # loop to top
+# loop to top

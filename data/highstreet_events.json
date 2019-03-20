@@ -1,7 +1,7 @@
 [{
-    "person": "Tommy",
+    "id": "Tommy",
     "stamp": "2017-01-01T05:30:00Z",
-    "action": "purchase",
+    "event": "purchase",
     "_": {
         "order_id": 1234,
         "total": 122.73,
@@ -10,9 +10,9 @@
         "cart_size": 2
     }
 }, {
-    "person": "Tommy",
+    "id": "Tommy",
     "stamp": "2017-01-01T05:30:00Z",
-    "action": "cart_item",
+    "event": "cart_item",
     "_": {
         "order_id": 1234,
         "product_name": "grommet",
@@ -21,9 +21,9 @@
         "product_group": ["garage", "basement"]
     }
 }, {
-    "person": "Tommy",
+    "id": "Tommy",
     "stamp": "2017-01-01T05:30:00Z",
-    "action": "cart_item",
+    "event": "cart_item",
     "_": {
         "order_id": 1234,
         "product_name": "shag rug",
@@ -33,9 +33,9 @@
     }
 
 }, {
-    "person": "Klara",
+    "id": "Klara",
     "stamp": "2017-01-03T13:15:00Z",
-    "action": "purchase",
+    "event": "purchase",
     "_": {
         "order_id": 2345,
         "total": 27.99,
@@ -44,9 +44,9 @@
         "cart_size": 1
     }
 }, {
-    "person": "Klara",
+    "id": "Klara",
     "stamp": "2017-01-03T13:15:00Z",
-    "action": "cart_item",
+    "event": "cart_item",
     "_": {
         "order_id": 2345,
         "product_name": "shag rug",
@@ -55,9 +55,9 @@
         "product_group": ["bedroom", "bathroom"]
     }
 }, {
-    "person": "Kyle",
+    "id": "Kyle",
     "stamp": "2017-01-02T13:01:00Z",
-    "action": "purchase",
+    "event": "purchase",
     "_": {
         "order_id": 3456,
         "total": 155.93,
@@ -66,9 +66,9 @@
         "cart_size": 3
     }
 }, {
-    "person": "Kyle",
+    "id": "Kyle",
     "stamp": "2017-01-02T13:01:00Z",
-    "action": "cart_item",
+    "event": "cart_item",
     "_": {
         "order_id": 3456,
         "product_name": "fly rod",
@@ -77,9 +77,9 @@
         "product_group": ["outdoor", "angling"]
     }
 }, {
-    "person": "Kyle",
+    "id": "Kyle",
     "stamp": "2017-01-02T13:01:00Z",
-    "action": "cart_item",
+    "event": "cart_item",
     "_": {
         "order_id": 3456,
         "product_name": "triple hook jigger",
@@ -88,9 +88,9 @@
         "product_group": ["outdoor", "angling"]
     }
 }, {
-    "person": "Kyle",
+    "id": "Kyle",
     "stamp": "2017-01-02T13:01:00Z",
-    "action": "cart_item",
+    "event": "cart_item",
     "_": {
         "order_id": 3456,
         "product_name": "deluxe spinner",
@@ -99,9 +99,9 @@
         "product_group": ["outdoor", "angling"]
     }
 }, {
-    "person": "Klara",
+    "id": "Klara",
     "stamp": "2017-01-05T13:15:00Z",
-    "action": "purchase",
+    "event": "purchase",
     "_": {
         "order_id": 4567,
         "total": 167.94,
@@ -110,9 +110,9 @@
         "cart_size": 2
     }
 }, {
-    "person": "Klara",
+    "id": "Klara",
     "stamp": "2017-01-05T13:15:00Z",
-    "action": "cart_item",
+    "event": "cart_item",
     "_": {
         "order_id": 4567,
         "product_name": "panini press",
@@ -121,9 +121,9 @@
         "product_group": ["kitchen", "restaurant"]
     }
 }, {
-    "person": "Klara",
+    "id": "Klara",
     "stamp": "2017-01-05T13:15:00Z",
-    "action": "cart_item",
+    "event": "cart_item",
     "_": {
         "order_id": 4567,
         "product_name": "fly rod",
@@ -132,9 +132,9 @@
         "product_group": ["outdoor", "angling"]
     }
 }, {
-    "person": "Tommy",
+    "id": "Tommy",
     "stamp": "2017-01-06T06:00:00Z",
-    "action": "purchase",
+    "event": "purchase",
     "_": {
         "order_id": 5678,
         "total": 717.98,
@@ -143,9 +143,9 @@
         "cart_size": 2
     }
 }, {
-    "person": "Tommy",
+    "id": "Tommy",
     "stamp": "2017-01-06T06:00:00Z",
-    "action": "cart_item",
+    "event": "cart_item",
     "_": {
         "order_id": 5678,
         "product_name": "panini press",
@@ -154,9 +154,9 @@
         "product_group": ["kitchen"]
     }
 }, {
-    "person": "Tommy",
+    "id": "Tommy",
     "stamp": "2017-01-06T06:00:00Z",
-    "action": "cart_item",
+    "event": "cart_item",
     "_": {
         "order_id": 5678,
         "product_name": "espresso mmachine",
@@ -165,9 +165,9 @@
         "product_group": ["kitchen", "restaurant"]
     }
 }, {
-    "person": "Klara",
+    "id": "Klara",
     "stamp": "2017-01-07T13:05:00Z",
-    "action": "purchase",
+    "event": "purchase",
     "_": {
         "order_id": 6789,
         "total": 145.93,
@@ -176,9 +176,9 @@
         "cart_size": 3
     }
 }, {
-    "person": "Klara",
+    "id": "Klara",
     "stamp": "2017-01-07T13:05:00Z",
-    "action": "cart_item",
+    "event": "cart_item",
     "_": {
         "order_id": 6789,
         "product_name": "fly rod",
@@ -187,9 +187,9 @@
         "product_group": ["outdoor", "angling"]
     }
 }, {
-    "person": "Klara",
+    "id": "Klara",
     "stamp": "2017-01-07T13:05:00Z",
-    "action": "cart_item",
+    "event": "cart_item",
     "_": {
         "order_id": 6789,
         "product_name": "gilded spoon",
@@ -198,9 +198,9 @@
         "product_group": ["outdoor", "angling"]
     }
 }, {
-    "person": "Klara",
+    "id": "Klara",
     "stamp": "2017-01-07T13:05:00Z",
-    "action": "cart_item",
+    "event": "cart_item",
     "_": {
         "order_id": 6789,
         "product_name": "double spinner",

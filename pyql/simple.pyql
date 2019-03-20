@@ -1,10 +1,14 @@
 aggregate: # define our output columns
-    count person
+    count id
     count product_name as purchased
     sum product_price as total_spent with product_name
 
 # iterate events where the product_group set contains 'outdoor'
-match where 'outdoor' in product_group:
+# and product_name is 'fly_rod' or 'guilded_spoon'
+for row in rows if
+        'outdoor' in product_group and
+        product_name in ['fly rod', 'gilded spoon']:
+
     # make a branch: /day_of_week/product_name
     # and aggregate person, product purchase, and total
-    tally(get_day_of_week(event_time()), product_name)
+    tally(get_day_of_week(row['stamp']), product_name)

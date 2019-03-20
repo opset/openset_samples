@@ -1,8 +1,10 @@
 aggregate:
-    count person
+    count id
     count product_name as purchased
     sum product_price as total_spent
 
-match where 'retro' in product_tags:
+for row in rows if
+        'retro' in product_tags:
+
     for tag in product_tags:
-        tally(product_name, tag)
+        tally(row['product_name'], tag)
