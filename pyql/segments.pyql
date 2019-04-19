@@ -2,26 +2,37 @@
 
 # match one of these
 for row in rows if
-        product_group in ['basement', 'garage', 'kitchen', 'bedroom', 'bathroom']:
-    tally
+        'basement' in product_group or    # product_group is a set
+        'garage' in product_group or 
+        'kitchen' in product_group or 
+        'bedroom' in product_group or 
+        'bathroom' in product_group:
+    return True
+return False    
 
 @segment products_yard ttl=300s use_cached=True refresh=300s
 
 # match one of these
 for row in rows if
-        product_group in ['basement', 'garage']:
-    tally
+        'basement' in product_group or 
+        'garage' in product_group:
+    return True
+return False    
 
 @segment products_outdoor ttl=300s use_cached=True refresh=300s
 
 # match one of these
 for row in rows if
-        product_group in ['outdoor', 'angling']:
-    tally
+        'outdoor' in product_group or 
+        'angling' in product_group:
+    return True
+return False    
 
 @segment products_commercial ttl=300s use_cached=True refresh=300s
 
 # match one of these
 for row in rows if
-        product_group == 'restaurant':
-    tally
+        'restaurant' in product_group:
+    return True
+return False    
+
