@@ -1,4 +1,4 @@
-@segment products_home ttl=300s use_cached=True refresh=300s
+@segment products_home ttl=300s use_cached=True refresh=300s on_insert=True 
 
 # match one of these
 for row in rows if
@@ -10,7 +10,7 @@ for row in rows if
     return True
 return False    
 
-@segment products_yard ttl=300s use_cached=True refresh=300s
+@segment products_yard ttl=300s use_cached=True refresh=300s on_insert=True 
 
 # match one of these
 for row in rows if
@@ -19,7 +19,7 @@ for row in rows if
     return True
 return False    
 
-@segment products_outdoor ttl=300s use_cached=True refresh=300s
+@segment products_outdoor ttl=300s use_cached=True refresh=300s on_insert=True 
 
 # match one of these
 for row in rows if
@@ -28,11 +28,15 @@ for row in rows if
     return True
 return False    
 
-@segment products_commercial ttl=300s use_cached=True refresh=300s
+@segment products_commercial ttl=300s use_cached=True refresh=300s on_insert=True 
 
 # match one of these
 for row in rows if
         'restaurant' in product_group:
     return True
 return False    
+
+@segment products_yard_and_outdoor ttl=300s use_cached=True refresh=60s on_insert=True z_index=1000
+
+union('products_outdoor', 'products_yard')
 
