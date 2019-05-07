@@ -38,5 +38,6 @@ return False
 
 @segment products_yard_and_outdoor ttl=300s use_cached=True refresh=60s on_insert=True z_index=1000
 
+# create a new segment containing both products_yard and products_outdoor
 union('products_outdoor', 'products_yard')
 
