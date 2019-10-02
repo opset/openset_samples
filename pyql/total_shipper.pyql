@@ -1,8 +1,0 @@
-aggregate:
-    count id
-    count shipper
-    sum shipping
-    sum total
-
-for row in rows:
-    tally('all', row['shipper'])

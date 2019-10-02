@@ -1,36 +1,6 @@
 # Samples
 
-OpenSet samples are provided in Node.js. Be sure to have a recent version of node installed.
-
-These examples use the popular node `request` module, but any http client library will work as well as the ever useful `async` module.  To install these modules go to the `openset/samples` directory and type:
-```
-npm install
-```
-
-#### Sample Data and Scripts
-
-- Sample __data__ is found in [openset/samples/data](https://github.com/perple-io/openset/tree/master/samples/data)
-- Sample __pyql__ scripts are found in [openset/samples/pyql](https://github.com/perple-io/openset/tree/master/samples/pyql)
-
-#### Init OpenSet and load sample data into `highstreet` table.
-
-Make sure OpenSet is started, then type the following from the `openset/samples` directory.
-```
-node init.js 
-```
-> :pushpin: passing `--help` to any sample will show help.
-
-#### Test Programs
-
-A few programs have been included that execute the pyql sample queries in the pyql directory. These scripts use make basic REST requests using http methods:
-
-- `node query_simple.js`
-- `node query_total_shipper.js`
-- `node query_tags_and_products.js`
-- `node query_purchased_after.js`
-
-We will add more samples soon.
-___
+The OpenSet Samples repo contains a sample dataset for the examples on the main page of the OpenSet project.___
 
 #### The MIT License
 
