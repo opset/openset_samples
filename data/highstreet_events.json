@@ -1,211 +1,192 @@
-[{
-    "id": "Tommy",
-    "stamp": "2017-01-01T05:30:00Z",
-    "event": "purchase",
-    "_": {
+[
+    {
+        "id": "Tommy",
+        "stamp": "2017-01-01T05:30:00Z",
+        "event": "purchase",
         "order_id": 1234,
         "total": 122.73,
         "shipping": 8.99,
         "shipper": "fedex",
         "cart_size": 2
-    }
-}, {
-    "id": "Tommy",
-    "stamp": "2017-01-01T05:30:00Z",
-    "event": "cart_item",
-    "_": {
+    },
+    {
+        "id": "Tommy",
+        "stamp": "2017-01-01T05:30:00Z",
+        "event": "cart_item",
         "order_id": 1234,
         "product_name": "grommet",
         "product_price": 94.74,
         "product_tags": ["red", "small", "rubber"],
         "product_group": ["garage", "basement"]
-    }
-}, {
-    "id": "Tommy",
-    "stamp": "2017-01-01T05:30:00Z",
-    "event": "cart_item",
-    "_": {
+    },
+    {
+        "id": "Tommy",
+        "stamp": "2017-01-01T05:30:00Z",
+        "event": "cart_item",
         "order_id": 1234,
         "product_name": "shag rug",
         "product_price": 27.99,
         "product_tags": ["red", "shaggy", "retro"],
         "product_group": ["bedroom", "bathroom"]
-    }
-
-}, {
-    "id": "Klara",
-    "stamp": "2017-01-03T13:15:00Z",
-    "event": "purchase",
-    "_": {
+    },
+    {
+        "id": "Klara",
+        "stamp": "2017-01-03T13:15:00Z",
+        "event": "purchase",
         "order_id": 2345,
         "total": 27.99,
         "shipping": 7.85,
         "shipper": "fedex",
         "cart_size": 1
-    }
-}, {
-    "id": "Klara",
-    "stamp": "2017-01-03T13:15:00Z",
-    "event": "cart_item",
-    "_": {
+    },
+    {
+        "id": "Klara",
+        "stamp": "2017-01-03T13:15:00Z",
+        "event": "cart_item",
         "order_id": 2345,
         "product_name": "shag rug",
         "product_price": 27.99,
         "product_tags": ["orange", "shaggy", "retro"],
         "product_group": ["bedroom", "bathroom"]
-    }
-}, {
-    "id": "Kyle",
-    "stamp": "2017-01-02T13:01:00Z",
-    "event": "purchase",
-    "_": {
+    },
+    {
+        "id": "Kyle",
+        "stamp": "2017-01-02T13:01:00Z",
+        "event": "purchase",
         "order_id": 3456,
         "total": 155.93,
         "shipping": 7.85,
         "shipper": "ground",
         "cart_size": 3
-    }
-}, {
-    "id": "Kyle",
-    "stamp": "2017-01-02T13:01:00Z",
-    "event": "cart_item",
-    "_": {
+    },
+    {
+        "id": "Kyle",
+        "stamp": "2017-01-02T13:01:00Z",
+        "event": "cart_item",
         "order_id": 3456,
         "product_name": "fly rod",
         "product_price": 99.95,
         "product_tags": ["carbon-fibre", "fishing", "gear"],
         "product_group": ["outdoor", "angling"]
-    }
-}, {
-    "id": "Kyle",
-    "stamp": "2017-01-02T13:01:00Z",
-    "event": "cart_item",
-    "_": {
+    },
+    {
+        "id": "Kyle",
+        "stamp": "2017-01-02T13:01:00Z",
+        "event": "cart_item",
         "order_id": 3456,
         "product_name": "triple hook jigger",
         "product_price": 27.99,
         "product_tags": ["fishing", "lures"],
         "product_group": ["outdoor", "angling"]
-    }
-}, {
-    "id": "Kyle",
-    "stamp": "2017-01-02T13:01:00Z",
-    "event": "cart_item",
-    "_": {
+    },
+    {
+        "id": "Kyle",
+        "stamp": "2017-01-02T13:01:00Z",
+        "event": "cart_item",
         "order_id": 3456,
         "product_name": "deluxe spinner",
         "product_price": 27.99,
         "product_tags": ["fishing", "lures"],
         "product_group": ["outdoor", "angling"]
-    }
-}, {
-    "id": "Klara",
-    "stamp": "2017-01-05T13:15:00Z",
-    "event": "purchase",
-    "_": {
+    },
+    {
+        "id": "Klara",
+        "stamp": "2017-01-05T13:15:00Z",
+        "event": "purchase",
         "order_id": 4567,
         "total": 167.94,
         "shipping": 7.85,
         "shipper": "fedex",
         "cart_size": 2
-    }
-}, {
-    "id": "Klara",
-    "stamp": "2017-01-05T13:15:00Z",
-    "event": "cart_item",
-    "_": {
+    },
+    {
+        "id": "Klara",
+        "stamp": "2017-01-05T13:15:00Z",
+        "event": "cart_item",
         "order_id": 4567,
         "product_name": "panini press",
         "product_price": 67.99,
         "product_tags": ["small-appliance", "stainless", "cooking"],
         "product_group": ["kitchen", "restaurant"]
-    }
-}, {
-    "id": "Klara",
-    "stamp": "2017-01-05T13:15:00Z",
-    "event": "cart_item",
-    "_": {
+    },
+    {
+        "id": "Klara",
+        "stamp": "2017-01-05T13:15:00Z",
+        "event": "cart_item",
         "order_id": 4567,
         "product_name": "fly rod",
         "product_price": 99.95,
         "product_tags": ["carbon-fibre", "fishing", "gear"],
         "product_group": ["outdoor", "angling"]
-    }
-}, {
-    "id": "Tommy",
-    "stamp": "2017-01-06T06:00:00Z",
-    "event": "purchase",
-    "_": {
+    },
+    {
+        "id": "Tommy",
+        "stamp": "2017-01-06T06:00:00Z",
+        "event": "purchase",
         "order_id": 5678,
         "total": 717.98,
         "shipping": 8.99,
         "shipper": "ground",
         "cart_size": 2
-    }
-}, {
-    "id": "Tommy",
-    "stamp": "2017-01-06T06:00:00Z",
-    "event": "cart_item",
-    "_": {
+    },
+    {
+        "id": "Tommy",
+        "stamp": "2017-01-06T06:00:00Z",
+        "event": "cart_item",
         "order_id": 5678,
         "product_name": "panini press",
         "product_price": 67.99,
         "product_tags": ["small-appliance", "stainless", "cooking"],
         "product_group": ["kitchen"]
-    }
-}, {
-    "id": "Tommy",
-    "stamp": "2017-01-06T06:00:00Z",
-    "event": "cart_item",
-    "_": {
+    },
+    {
+        "id": "Tommy",
+        "stamp": "2017-01-06T06:00:00Z",
+        "event": "cart_item",
         "order_id": 5678,
         "product_name": "espresso mmachine",
         "product_price": 649.99,
         "product_tags": ["small-appliance", "stainless", "coffee"],
         "product_group": ["kitchen", "restaurant"]
-    }
-}, {
-    "id": "Klara",
-    "stamp": "2017-01-07T13:05:00Z",
-    "event": "purchase",
-    "_": {
+    },
+    {
+        "id": "Klara",
+        "stamp": "2017-01-07T13:05:00Z",
+        "event": "purchase",
         "order_id": 6789,
         "total": 145.93,
         "shipping": 7.85,
         "shipper": "ground",
         "cart_size": 3
-    }
-}, {
-    "id": "Klara",
-    "stamp": "2017-01-07T13:05:00Z",
-    "event": "cart_item",
-    "_": {
+    },
+    {
+        "id": "Klara",
+        "stamp": "2017-01-07T13:05:00Z",
+        "event": "cart_item",
         "order_id": 6789,
         "product_name": "fly rod",
         "product_price": 99.95,
         "product_tags": ["carbon-fibre", "fishing", "gear"],
         "product_group": ["outdoor", "angling"]
-    }
-}, {
-    "id": "Klara",
-    "stamp": "2017-01-07T13:05:00Z",
-    "event": "cart_item",
-    "_": {
+    },
+    {
+        "id": "Klara",
+        "stamp": "2017-01-07T13:05:00Z",
+        "event": "cart_item",
         "order_id": 6789,
         "product_name": "gilded spoon",
         "product_price": 27.99,
         "product_tags": ["fishing", "lures"],
         "product_group": ["outdoor", "angling"]
-    }
-}, {
-    "id": "Klara",
-    "stamp": "2017-01-07T13:05:00Z",
-    "event": "cart_item",
-    "_": {
+    },
+    {
+        "id": "Klara",
+        "stamp": "2017-01-07T13:05:00Z",
+        "event": "cart_item",
         "order_id": 6789,
         "product_name": "double spinner",
         "product_price": 17.99,
         "product_tags": ["fishing", "lures"],
         "product_group": ["outdoor", "angling"]
     }
-}]
+]
